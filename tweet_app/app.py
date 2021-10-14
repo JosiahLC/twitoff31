@@ -62,14 +62,5 @@ def main():
     
     return render_template("home.html", users=users)
 
-@app.route('/iris')
-def iris():
-    from sklearn.datasets import load_iris
-    from sklearn.linear_model import LogisticRegression
-    X, y = load_iris(return_X_y=True)
-    clf = LogisticRegression(random_state=0, solver="lbfgs",
-    multi_class='multinominal').fit(X, y)
-    return str(clf.predict(X[:2, :]))
-
 if __name__ == "__main__":
     app.run()
