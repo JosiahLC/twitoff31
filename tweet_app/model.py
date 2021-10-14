@@ -35,7 +35,7 @@ def vectorize_tweet(twitext):
     return nlp(twitext).vector
 def sing_vects(twit):
     """makes an array of a series of texts. returns the array"""
-    tweets_vec = np.array([vectorize_tweet(tweet.full_text)for tweet in twit])
+    tweets_vec = np.array([vectorize_tweet(tweet.text)for tweet in twit])
     return tweets_vec
 def comp_vects(zeros, ones):
     """combines two arrays of vectors, labels and fits a logistic regression to them. returns the regression"""
