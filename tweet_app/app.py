@@ -1,4 +1,4 @@
-
+import os
 from flask import Flask, render_template, request
 from .model import  db, User, vectorize_tweet, sing_vects, comp_vects
 import tweepy
@@ -19,13 +19,8 @@ db.init_app(app)
 with app.app_context():
     db.create_all()
 
-
-
-
-
-
-TWITTER_API_KEY = TWITTER_API_KEY
-TWITTER_API_KEY_SECRET = TWITTER_API_KEY_SECRET
+TWITTER_API_KEY = os.getenv("TWITTER_API_KEY")
+TWITTER_API_KEY_SECRET = os.getenv("TWITTER_API_KEY_SECRET")
 auth = tweepy.OAuthHandler(TWITTER_API_KEY, TWITTER_API_KEY_SECRET)
 twitter = tweepy.API(auth)
 
