@@ -6,11 +6,11 @@ import tweepy
 """Create and configure an instance of the flask application"""
 app = Flask(__name__)
 
-DATABASE_URI="sqlite:///twitoff.sqlite3"
-
 # configure app
 app.config["SQLALCHEMY_DATABASE_URI"] = DATABASE_URI
 app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
+
+conn = psycopg2.connect(DATABASE_URL, sslmode='require')
 
 # initialize database
 db.init_app(app)
