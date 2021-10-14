@@ -7,7 +7,7 @@ import tweepy
 app = Flask(__name__)
 
 # configure app
-app.config["SQLALCHEMY_DATABASE_URI"] = os.getenv['DATABASE_URI']
+app.config["SQLALCHEMY_DATABASE_URI"] = os.getenv('DATABASE_URI')
 app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
 
 
