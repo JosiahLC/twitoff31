@@ -25,7 +25,7 @@ twitter = tweepy.API(auth)
 
 
 # ROOT ROUTE
-@app.route('/', methods=["GET", "POST"])
+@app.route("/", methods=["GET", "POST"])
 def main():
     name = request.form.get("name")   
   
