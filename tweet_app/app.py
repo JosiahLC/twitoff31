@@ -20,8 +20,7 @@ with app.app_context():
     db.create_all()
 
 
-TWITTER_API_KEY='Hk8BgA0BEvWmbmShpQYmreqdV'
-TWITTER_API_KEY_SECRET='DsURvwHCSYl9PomZqRsbEqac1bqzKif1ru5UdWyzsk2q5aYwur'
+
 
 
 
